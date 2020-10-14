@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import Card from '../Card/Card';
@@ -27,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
 
 export function Board() {
   const classes = useStyles();
+
+  const dimensions = useContext(CurrentDimensions);
 
   // const [rows, setRows] = useState('');
   // const [cols, setCols] = useState('');

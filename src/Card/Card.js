@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Grid } from '@material-ui/core';
 import ReactCardFlip from 'react-card-flip';
+import svg from '../card_back.svg';
 
 export default function Card() {
   // Declare a new state variable, which we'll call "count"
@@ -11,12 +12,10 @@ export default function Card() {
       <ReactCardFlip isFlipped={flipped} flipDirection="horizontal">
         <Grid className={'front'} onClick={() => setFlipped(!flipped)} >
           This is the front of the card.
-          {/* <button onClick={this.handleClick}>Click to flip</button> */}
         </Grid>
 
         <Grid className={'back'} onClick={() => setFlipped(!flipped)} >
-          This is the back of the card.
-          {/* <button onClick={this.handleClick}>Click to flip</button> */}
+          <img src={svg} alt="card back" width={100} />
         </Grid>
       </ReactCardFlip>
       {/* <p hidden={flipped}> VISIBLE </p>
